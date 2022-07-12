@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+		<!--<link rel="stylesheet" href="css/stylegame.css">-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kelompok 4</title>
+        <!--link icon-->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6f31a021d7.js" crossorigin="anonymous"></script>
+        <!--link google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <!--home-->
+        <div class="home_display">
+            <div id="kolom">
+                <div class="text_ctr">
+                    <img src="css/img/goose1.png" class="ukuran_gambar" alt=""> 
+                    <h1>GOOSE RUN GAME</h1>
+                </div>
+                <div class="ctr">
+                    <button  class="ctr btn"onclick="gamepage()"><a style="color:#5AA469">START</a></button>
+                    <button class="ctr btn color"onclick="highscorepage()"><a style="color:#D35D6E">HIGH<br>SCORE</a></button>
+                </div> 
+            </div>
+        </div>
+        
+        <!--highscore-->
+        <div class="High_display">
+            <a class="buttonpause" style="height: 50px;" onclick="homepage()"><i  class="fa-solid fa-angle-left fa-lg iconhs"></i></a>
+            <div id="kolom">
+                <div class="text_ctr_hs">
+                    <h1 class="text_ctr_hs_h1">HIGH SCORE</h1>
+                </div>
+                <div class="high_konten konten_flex high_over_hs">
+                    <div class="img_w">
+                        <img src="css/img/goose1.png" class="img_size" alt="">
+                    </div>
+                    <div class="history-hs card">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="10px" class="th_hs">Rank</th>
+                                    <th width="80px" class="th_hs">Nama</th>
+                                    <th width="20px" class="th_hs">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody id="historyList2"></tbody>
+                        </table>
+                    </div>
+                </div> 
+                <img src="css/img/suelo.jpg">
+            </div>
+        </div>
+        <!--game-->
+        <div class="game_display">
+            <i  class='bx bx-pause buttonpause' onClick=" pause()"></i>
+            <div class="camera">
+                <div class="container">
+                    <div class="ground"></div>
+                    <div class="angsa angsa-berlari"></div>
+                <div class="konten_flex" style="float: right; padding-right: 50px; margin-right: 50px;">
+                    <h4 class="h4-game">Score</h4>
+                    <p class="score" width="30px" style="margin-right: 20px;">0</p>
+                </div>
+            </div>
+        
+
+            <div class="game-pause game2">
+                <h1 class="game-pause-h1">PAUSE</h1>
+                <i class='bx bx-x-circle buttonX' onClick="mulai()"></i>
+                <img src="css/img/goose1.png" class="imgangsa">
+                <div style="margin: auto; width: 300px; margin-top: -20px;">
+                    <button class="button2" type="button" onclick="reloadpage()"><i class="fa-solid fa-house"></i>&nbsp;Home</button>&nbsp;&nbsp;
+                </div>  
+            </div>
+
+            <div class="game-over game2">
+                <h1 class="game-over-h1">GAME OVER</h1>
+                <div class="konten_flex">
+                    <div class="konten_flex_kolom">
+                        <h1 class="hasilscore">SCORE!</h1>
+                        <div class="score2">0</div>
+                        <div class="margin-btn-pause">
+                        <button class="button2"  type="button" onclick="reloadpage()"><i class="fa-solid fa-house"></i>&nbsp;Home</button>&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="konten_flex_kolom" style="margin-top: -10px;">
+                    <div>
+                        <i class="fa-solid fa-angle-right fa-lg" style="font-size: large;color: white;"></i>
+                        <input id="player-name" type=text placeholder="nama" class="textbox-nama"  required>
+                        <button class="buttton" onClick="getScore()">input</button>
+                    </div>
+                        <div class="history card" id="nama">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th width="10px" >Rank</th>
+                                        <th width="80px">Nama</th>
+                                        <th width="20px">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="historyList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        
+        
+		<script src="main.js"></script>
+    </body>
+    <footer class="footer">
+        <p>&copy; 20082010106, 20082010109, 20082010111</p>
+    </footer>
+</html>
